@@ -74,8 +74,8 @@ class MainActivity : AppCompatActivity() {
                 if (question != null) {
                     binding.questionInput.setText(question)
 
-                    CoroutineScope(Dispatchers.Main).launch {
-                        async(Dispatchers.IO) { askWolfram(question) }.await()
+                    CoroutineScope(Dispatchers.IO).launch {
+                        askWolfram(question)
                     }
                 }
             }
